@@ -13,6 +13,8 @@ Console.Clear();
 Console.Write("Введите количество элементов массива: ");
 int num = int.Parse(Console.ReadLine()!)!;
 string[] arr = GetArray(num);
+Console.Write("[");
+PrintArray(arr);
 
 string InputElelment(string message)
 {
@@ -29,4 +31,12 @@ string[] GetArray(int size)
         result[i] = InputElelment("Введите элемент массива: ");
     }
     return result;
+}
+
+void PrintArray(string[] inArray)
+{
+    for (int i = 0; i < inArray.Length; i++)
+    {
+        Console.Write($"“{inArray[i]}” ");
+    }
 }
