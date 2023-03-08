@@ -15,6 +15,9 @@ int num = int.Parse(Console.ReadLine()!)!;
 string[] arr = GetArray(num);
 Console.Write("[");
 PrintArray(arr);
+Console.Write("] -> [");
+ElementSelection(arr);
+Console.Write("]");
 
 string InputElelment(string message)
 {
@@ -39,4 +42,19 @@ void PrintArray(string[] inArray)
     {
         Console.Write($"“{inArray[i]}” ");
     }
+}
+
+string[] ElementSelection(string[] Array)
+{
+    string[] res = new string[Array.Length];
+    for (int i = 0; i < Array.Length; i++)
+    {
+        string element = Array[i];
+        int count = element.Length;
+        if (count < 4)
+        {
+            Console.Write($"“{Array[i]}” ");
+        }
+    }
+    return res;
 }
