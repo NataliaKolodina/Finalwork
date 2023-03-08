@@ -12,3 +12,21 @@ Console.Clear();
 
 Console.Write("Введите количество элементов массива: ");
 int num = int.Parse(Console.ReadLine()!)!;
+string[] arr = GetArray(num);
+
+string InputElelment(string message)
+{
+    Console.Write($"{message}: ");
+    string res = Console.ReadLine()!;
+    return res;
+}
+
+string[] GetArray(int size)
+{
+    string[] result = new string[size];
+    for (int i = 0; i < size; i++)
+    {
+        result[i] = InputElelment("Введите элемент массива: ");
+    }
+    return result;
+}
